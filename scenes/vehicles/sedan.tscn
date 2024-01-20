@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dll1wsbl6n4ux"]
+
+[ext_resource type="PackedScene" uid="uid://db3vp5nhpt64g" path="res://assets/sedan.dae" id="1_ol2v3"]
+[ext_resource type="Script" path="res://scripts/VehicleModel.gd" id="1_xxy3a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8u2ih"]
+size = Vector3(1.26031, 1.29103, 2.35083)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_xxy3a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000152588, 0.649355, -0.0430908)
+shape = SubResource("BoxShape3D_8u2ih")
+
+[node name="sedan" parent="." instance=ExtResource("1_ol2v3")]

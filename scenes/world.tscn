@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://l3gy7f5888iw"]
+
+[ext_resource type="Script" path="res://scripts/SpawnPoint.gd" id="1_6e25e"]
+[ext_resource type="PackedScene" uid="uid://bf00gu63bp5rw" path="res://scenes/vehicle.tscn" id="2_df0va"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qsso"]
+albedo_color = Color(0.188235, 0.188235, 0.188235, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lhwqf"]
+albedo_color = Color(0, 0.8, 0.447059, 1)
+
+[node name="World" type="Node3D"]
+
+[node name="Ground" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_4qsso")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.73046, 0.682955, 0, -0.682955, 0.73046, 0, 14.5747, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.896425, -0.184452, 0.402989, -1.9028e-17, 0.90928, 0.416186, -0.443196, -0.373079, 0.815101, 1.89784, 2.97823, 3.48088)
+
+[node name="SpawnPoint" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, -6.08433)
+visible = false
+height = 1.0
+material = SubResource("StandardMaterial3D_lhwqf")
+script = ExtResource("1_6e25e")
+vehicle_scene = ExtResource("2_df0va")

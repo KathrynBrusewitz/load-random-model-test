@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dai1nstiep2yu"]
+
+[ext_resource type="PackedScene" uid="uid://dbiysv7aimmhj" path="res://assets/suv.dae" id="1_8ku4d"]
+[ext_resource type="Script" path="res://scripts/VehicleModel.gd" id="1_08lni"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8u2ih"]
+size = Vector3(1.24945, 1.28561, 2.52661)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_08lni")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000152588, 0.645157, -0.0281982)
+shape = SubResource("BoxShape3D_8u2ih")
+
+[node name="suv" parent="." instance=ExtResource("1_8ku4d")]
