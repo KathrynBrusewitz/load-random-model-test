@@ -12,6 +12,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+
 func _ready():
 	velocity = Vector3.MODEL_FRONT * speed
 	velocity = velocity.rotated(Vector3.UP, rotation.y)

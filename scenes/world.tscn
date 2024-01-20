@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://l3gy7f5888iw"]
+[gd_scene load_steps=4 format=3 uid="uid://l3gy7f5888iw"]
 
 [ext_resource type="Script" path="res://scripts/SpawnPoint.gd" id="1_6e25e"]
-[ext_resource type="PackedScene" uid="uid://bf00gu63bp5rw" path="res://scenes/vehicle.tscn" id="2_df0va"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qsso"]
 albedo_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -28,4 +27,3 @@ visible = false
 height = 1.0
 material = SubResource("StandardMaterial3D_lhwqf")
 script = ExtResource("1_6e25e")
-vehicle_scene = ExtResource("2_df0va")
